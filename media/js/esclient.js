@@ -436,6 +436,24 @@ function adjustSearchFieldsForTable(colData)
 	return retObj;
 }
 
+function pushPropName(columns, properties, prefix)
+{
+	$.each(properties, function (propName, map)
+	{
+		if (map.hasOwnProperty('properties'))
+		{
+			if (prefix.length == 0)
+			{
+				pushPropName(columns, map.properties, propName + '.');
+			} else {
+				pushPropName(columns, map.properties, prefix + propName + '.');
+			}
+		} else {
+			columns.push({ mData: '_source.' + prefix + propName , sTitle : prefix + propName});
+		}
+	});
+}
+
 function getQueryResultsColumns()
 {
 	var indxType = $("#indexTypes").val();
@@ -454,10 +472,7 @@ function getQueryResultsColumns()
 			{
 				if (key == indxType)
 				{
-					$.each(mapping.properties, function (propName, map)
-					{
-						columns.push({ mData: '_source.' + propName , sTitle : propName});
-					});
+					pushPropName(columns, mapping.properties, '');
 				isTypeFound = true;
 				return false;
 				}	
