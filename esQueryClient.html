@@ -370,89 +370,56 @@ $(document).ready(function () {
     <li><a href="#search-tab">Search</a></li>
   </ul>	
 <div id="search-tab">
-<table width="70%" border="0">
-		<tr>
-			<td	colspan="2" align="left">
-					<div>
-						  <select id="index" onChange="" title="Select Index" class="multiselect indexClass" multiple="multiple"></select>
-					</div>
-			</td>
-			<td  colspan="2" align="left">	
-						<div id="dropIndexDiv">
-							<button style="width: 140px; height: 30px;" id="dropIndex" onclick="confirmIndexDelete()">Drop Index/Type</button>
-						</div>						
-			</td>			
-		</tr>
-		<tr>
-			<td colspan="2" align="left">	
-					<div>
-						  <select id="indexTypes" onChange="" title="Select Type" class="multiselect indexTypesClass" multiple="multiple"></select>
-					</div>					
-			</td>
-			<td  colspan="2" align="left">	
-						<div>
-							<button  style="width: 140px; height: 30px;" id="delete" onclick="confirmDelete()">Delete By Id</button>
-						</div>						
-			</td>
-		</tr>
-		<tr>
-			<td colspan="1" align="left" >	
-					<div>
-						  <select id="indexFields" onChange="" title="Select Fields" class="multiselect" multiple="multiple"></select>
-					</div>					
-			</td>
-			<td colspan="1" align="left" >	
-					<div style="float: left; margin-left: 7em;" >
-						  <select id="sortFields" onChange="" title="Select Fields" class="multiselect" multiple="multiple"></select>
-					</div>
-					<div style="float: right; margin-right: 3em; margin-top: 0.3em;">
-						  <input type="checkbox" id="sortOrder" class="ui-state-highlight ui-corner-all">
-					</div>					
-			</td>
-			<td colspan="2" align="right" >	
-					
-			</td>				
-		</tr>
-		<tr>
-			<td colspan="4">
-					<div>
-						  <label for="query"><strong>Routing key:</strong></label>
-					</div>
-			</td>
-		</tr>		
-		<tr>
-			<td colspan="2">
-					<div>
-						  <input type="text" id="routingKey" style="width: 375px" />
-					</div>
-			</td>
-			<td  colspan="2" align="left">	
-						<div>
-							<button  style="width: 140px; height: 30px;" id="queryDelete" onclick="confirmDeleteByQuery()">Delete By Query</button>
-						</div>						
-			</td>			
-		</tr>		
-		<tr>
-			<td colspan="4">
-					<div>
-						  <label id="querySyntax"></label>
-					</div>
-			</td>
-		</tr>		
-		<tr>
-			<td colspan="2" align="left">
-					<div>
-						  <textarea name="query" id="query" >*</textarea>
-						  <button id="luceneEscape" style="width: 50px; height: 30px;" title="Escape Lucene characters" ><img src=".\media\images\LuceneEscape.png" style="width: 25px; height: 25px;"></button>
-					</div>
-			</td>
-			<td  colspan="2" align="left">	
-					<div>
-						<button style="width: 140px; height: 30px;" id="search" onclick="validateQueryAndSearch()">Search Index</button>
-					</div>						
-			</td>				
-		</tr>		
-	</table>			
+<div style="clear:both;height:25px;">
+	<div style="float: left;">
+		  <select id="index" onChange="" title="Select Index" class="multiselect indexClass" multiple="multiple"></select>
+	</div>
+	<div style="float: left;">
+		  <select id="indexTypes" onChange="" title="Select Type" class="multiselect indexTypesClass" multiple="multiple"></select>
+	</div>
+	<div style="float: left;">
+		  <select id="indexFields" onChange="" title="Select Fields" class="multiselect" multiple="multiple"></select>
+	</div>
+	<div style="float: left;">
+		  <select id="sortFields" onChange="" title="Select Fields" class="multiselect" multiple="multiple"></select>
+	</div>
+	<div style="float: left; margin-left:5px;">
+		  <input type="checkbox" id="sortOrder" class="ui-state-highlight ui-corner-all">
+	</div>
+</div>
+<!--
+<div style="clear:both;height:25px;">
+	<div style="float: left;">
+		<label for="query"><strong>Routing key:</strong></label>
+	</div>
+	<div style="float: left; margin-left:5px;">
+		<input type="text" id="routingKey" style="width: 200px" />
+	</div>
+</div>
+-->
+<div style="clear:both;height:25px;">
+	<div style="float: left;">
+		<label id="querySyntax"></label><br>
+		<textarea name="query" id="query" >*</textarea>
+		<button id="luceneEscape" style="width: 50px; height: 30px;" title="Escape Lucene characters" ><img src="./media/images/LuceneEscape.png" style="width: 20px; height: 20px;"></button>
+	</div>
+</div>
+<div style="clear:both;height:30px;margin-bottom:10px;">
+	<div style="float: left;">
+		<button style="width: 140px; height: 30px;" id="search" onclick="validateQueryAndSearch()">Search Index</button>
+	</div>
+	<div style="float: left;">
+		<button  style="width: 140px; height: 30px;" id="queryDelete" onclick="confirmDeleteByQuery()">Delete By Query</button>
+	</div>
+	<div style="float: left;">
+		<button  style="width: 140px; height: 30px;" id="delete" onclick="confirmDelete()">Delete By Id</button>
+	</div>
+	<div id="dropIndexDiv" style="float: left;">
+		<button style="width: 140px; height: 30px;" id="dropIndex" onclick="confirmIndexDelete()">Drop Index/Type</button>
+	</div>
+	<div style="float: left;">
+	</div>
+</div>
 
 <div id="dialog" title="Please confirm!" class="textColor">
 	This is the default dialog which is useful for displaying information.
