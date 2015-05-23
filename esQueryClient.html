@@ -551,6 +551,21 @@ $(document).ready(function () {
 			</td>		
 		</tr>
 		<tr>
+			<td colspan="2" align="left"  width="30%">
+					<div>
+						  <label><strong>Query Type:</strong></label>
+					</div>
+			</td>
+			<td	colspan="1" width="5%" align="left">
+					<div>&nbsp;</div>
+			</td>
+			<td colspan="1" align="right"  width="65%">
+					<div>
+						  <input type="checkbox" id="useLucene" onchange="setQueryLabel()">
+					</div>
+			</td>
+		</tr>
+		<tr>
 			<td colspan="2" align="left"  width="30%">	
 					<div>
 						  <label><strong>Default Operator:</strong></label>
@@ -598,21 +613,6 @@ $(document).ready(function () {
 					</div>					
 			</td>		
 		</tr>		
-		<tr>
-			<td colspan="2" align="left"  width="30%">	
-					<div>
-						  <label><strong>Query Type:</strong></label>
-					</div>					
-			</td>
-			<td	colspan="1" width="5%" align="left">
-					<div>&nbsp;</div>
-			</td>			
-			<td colspan="1" align="right"  width="65%">	
-					<div>
-						  <input type="checkbox" id="useLucene" onchange="setQueryLabel()">
-					</div>					
-			</td>		
-		</tr>
 		<tr>
 			<td colspan="2" align="left"  width="30%">	
 					<div>

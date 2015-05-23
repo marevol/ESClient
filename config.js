@@ -14,8 +14,8 @@ var Config = {
    //Control wildcard and prefix queries to be analyzed or not
    'ANALYZE_WILDCARD':false,
    
-   //Query format to use while searching or delete by query. defaults to Lucene
-   'USE_LUCENE_QUERY_TYPE':true,
+   //Query format to use while searching or delete by query. defaults to Query DSL
+   'USE_LUCENE_QUERY_TYPE':false,
    
    //Set to true if you want capability of dropping the index or mapping.
    'ENABLE_INDEX_DROP':false,
