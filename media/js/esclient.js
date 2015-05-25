@@ -934,8 +934,8 @@ function showJson(row)
 		//viewEditJSON = data.hits.hits[0]._source;
 		viewEditJSON = data._source;
 		$('#rowView').html(prettifyJson(viewEditJSON, $('#rowView'), false));
-		$('#rowView').dialog('option','width',700);
-		$('#rowView').dialog('option','height',400);
+		$('#rowView').dialog('option','width','80%');
+		$('#rowView').dialog('option','height',600);
 		$('#rowView').dialog("open");
 	}).error(function ( jqXHR, textStatus, errorThrown ) {
 				$("#dialog").dialog('option', 'title', 'Error fetching the data!' );
@@ -1088,8 +1088,8 @@ function showEditableJSON(rowDialog)
         }		
     ]
 	});
-	$("#rowUpdate").dialog('option','width',700);
-	$('#rowUpdate').dialog('option','height',400);
+	$("#rowUpdate").dialog('option','width','80%');
+	$('#rowUpdate').dialog('option','height',600);
 	$('#rowUpdate').dialog("open");
 }
 

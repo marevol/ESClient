@@ -406,19 +406,19 @@ $(document).ready(function () {
 </div>
 <div style="clear:both;height:30px;margin-bottom:10px;">
 	<div style="float: left;">
-		<button style="width: 140px; height: 30px;" id="search" onclick="validateQueryAndSearch()">Search Index</button>
+		<button style="width: 140px; height: 30px;" id="search" onclick="validateQueryAndSearch()">Search</button>
 	</div>
-	<div style="float: left;">
+	<div style="float: right;">
 		<button  style="width: 140px; height: 30px;" id="queryDelete" onclick="confirmDeleteByQuery()">Delete By Query</button>
 	</div>
-	<div style="float: left;">
+	<div style="float: right;">
 		<button  style="width: 140px; height: 30px;" id="delete" onclick="confirmDelete()">Delete By Id</button>
 	</div>
-	<div id="dropIndexDiv" style="float: left;">
+	<div id="dropIndexDiv" style="float: right;">
 		<button style="width: 140px; height: 30px;" id="dropIndex" onclick="confirmIndexDelete()">Drop Index/Type</button>
 	</div>
-	<div style="float: left;">
-	</div>
+</div>
+<div style="clear:both;">
 </div>
 
 <div id="dialog" title="Please confirm!" class="textColor">
@@ -428,9 +428,9 @@ $(document).ready(function () {
 <div id="deleteByQuery" title="Confirm DELETE" ></div>
 <div id="deleteIndex" title="Confirm DELETE" ></div>
 
-<div id="rowUpdate" title="Edit data" style="display: none; width: 700px; height: 400px;">
+<div id="rowUpdate" title="Edit data" style="display: none; width: 80%; height: 400px;">
          <div>
-               <textarea cols="70" rows="300" style="width: 650px; height: 275px;" id="editRow"></textarea>
+               <textarea cols="70" rows="300" style="width: 98%; height: 475px;" id="editRow"></textarea>
          </div>
 </div>
 
