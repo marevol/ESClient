@@ -934,6 +934,7 @@ function showJson(row)
 		//viewEditJSON = data.hits.hits[0]._source;
 		viewEditJSON = data._source;
 		$('#rowView').html(prettifyJson(viewEditJSON, $('#rowView'), false));
+	        $('#rowView').urlAutoLink();
 		$('#rowView').dialog('option','width','80%');
 		$('#rowView').dialog('option','height',600);
 		$('#rowView').dialog("open");
@@ -1093,4 +1094,10 @@ function showEditableJSON(rowDialog)
 	$('#rowUpdate').dialog("open");
 }
 
+$.fn.urlAutoLink = function(base)
+{
+    return this.each(function() {
+        $(this).html( $(this).html().replace(/((http|https|ftp):\/\/[\w?=&.\/-;#~%-]+(?![\w\s?&.\/;#~%"=-]*>))/g, '<a href="$1">$1</a> '));
+    });
+}
 
