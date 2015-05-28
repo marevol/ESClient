@@ -1053,7 +1053,7 @@ function updateRow(dialog)
 	   success: function (response) {
 		$(dialog).dialog("close");
 		$("#dialog").text("Successfully updated the row with id: " + decodeURIComponent(rowID));
-		$( "#button-ok" ).attr("disabled", true).addClass("ui-state-disabled");
+                $( "#button-cancel" ).attr("disabled", true).addClass("ui-state-disabled");
 		$('#dialog').dialog('option','width',700);
 		$('#dialog').dialog('option','height',300);			
 		$('#dialog').dialog("open");
