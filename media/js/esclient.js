@@ -381,7 +381,14 @@ function getMappingJSON(indxNameArr, esType)
 function populateSearchFields(colData)
 {
 	$('#indexFields').find('option').remove().end();
-	$.each(colData.cols, function (key, mapping)
+
+	$.each(colData.cols
+        .sort(
+        function(a, b) {
+		return (a.sTitle < b.sTitle) ? -1 : 1;
+	})
+        ,
+	function (key, mapping)
 	{
 		if (mapping.sTitle)
 		{
@@ -395,7 +402,13 @@ function populateSearchFields(colData)
 function populateSortFields(colData)
 {
 	$('#sortFields').find('option').remove().end();
-	$.each(colData.cols, function (key, mapping)
+        $.each(colData.cols
+        .sort(
+        function(a, b) {
+                return (a.sTitle < b.sTitle) ? -1 : 1;
+        })
+        ,
+        function (key, mapping)
 	{
 		if (mapping.sTitle)
 		{
